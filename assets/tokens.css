@@ -1,0 +1,122 @@
+/* ============================================================
+   Dra. Maria Luiza Terra, gastroenterologista (CRM-MG 73963, RQE 58851)
+   Identidade visual "Evolução do Studio Minimalise", versão 1, 09/11/2026
+
+   Função: fonte única das cores, tipos, formas e movimento da marca.
+   Base: a identidade do Studio Minimalise (PDF em raw/marca/, 2025), com a paleta-base, o monograma MTS e o espírito
+   minimalista mantidos. O que muda do PDF para este arquivo, e por quê: exploracoes/direcoes-marca.html (direção B).
+   Regras de uso: manual-marca.html.
+
+   Importe por caminho, nunca copie os valores:
+       <link rel="stylesheet" href=".../marca-marialuiza/tokens.css">
+
+   Gabarito: python3 _shared/tools/gabarito_marca.py marialuiza/wiki/concepts/marca-marialuiza/tokens.css manual-marca.html
+   ============================================================ */
+
+:root{
+  /* ---------- superfície ----------
+     O PDF usa o bege #CDBCA6 como fundo de página com texto branco (1.85:1) e o branco puro. Aqui o fundo da página
+     é um off-white quente puxado do bege, e o bege vira faixa de marca com texto escuro. */
+  --ml-paper:      #F6F1E9;   /* off-white quente, fundo de toda página */
+  --ml-paper-2:    #EDE4D5;   /* segunda superfície clara: faixa suave e fundo de ficha */
+  --ml-surface:    #FBF8F3;   /* cartão e campo sobre o off-white */
+  --ml-hair:       #DCCFBB;   /* linha fina, só ornamento: nunca delimita controle */
+  --ml-hair-forte: #857866;   /* borda de controle: 3.83:1 sobre o off-white, 4.07:1 sobre o cartão, 3.42:1 sobre a faixa suave */
+
+  /* ---------- tinta ----------
+     Verde bem escuro, puxado do verde da marca. O PDF não define tinta de texto (usa preto e cinza do Word). */
+  --ml-ink:        #26302A;   /* texto: 12.14:1 sobre o off-white, 10.83:1 sobre a faixa suave, 7.37:1 sobre o bege */
+  --ml-ink-2:      #47514A;   /* texto secundário: 7.34:1 sobre o off-white, 6.55:1 sobre a faixa suave. Sobre o bege só a tinta (4.46:1 não passa) */
+  --ml-ink-3:      #58625A;   /* rótulo e legenda: 5.64:1 sobre o off-white, 5.03:1 sobre a faixa suave */
+
+  /* ---------- ação: terracota da marca ----------
+     #995A37 é o terracota do PDF, sem mudança. Como botão com letra clara passa (5.26:1). Como letra sobre o
+     off-white passa raso (4.82:1) e sobre a faixa suave não (4.30:1): para link e texto, o terracota fundo. */
+  --ml-accent:        #995A37;   /* botão, monograma, filete: 4.82:1 sobre o off-white, 5.12:1 sobre o cartão */
+  --ml-accent-deep:   #85492A;   /* link e texto terracota: 6.26:1 sobre o off-white, 5.58:1 sobre a faixa suave */
+  --ml-on-accent:     #FFFBF5;   /* texto do botão: 5.26:1 sobre o terracota, 6.35:1 sobre o hover */
+  --ml-accent-hover:  #8A4E2E;   /* botão em hover */
+  --ml-on-terra:      #F6F1E9;   /* texto sobre fundo terracota (faixa): 4.82:1 */
+
+  /* ---------- faixas de marca ----------
+     Bege e verde do PDF, sem mudança de valor. Bege é fundo, nunca letra (2.93:1 como letra terracota, 1.85:1 como letra branca).
+     Verde é fundo de faixa com letra off-white (4.60:1) e, como letra, só o verde fundo. */
+  --ml-bege:          #CDBCA6;   /* faixa de marca: texto só em --ml-ink (7.37:1) */
+  --ml-verde:         #617259;   /* faixa de marca: texto em --ml-on-verde (4.60:1) */
+  --ml-on-verde:      #F6F1E9;   /* texto sobre o verde */
+  --ml-verde-deep:    #4C5C46;   /* verde como letra ou filete sobre o claro: 6.38:1 sobre o off-white, 5.69:1 sobre a faixa suave */
+
+  /* ---------- ornamento: caramelo e dourado ----------
+     Caramelo #CBAC86 do PDF: 2.15:1 sobre o branco. Nunca letra, nunca ícone que carrega informação. Só filete e fundo de detalhe.
+     O gradiente dourado do PDF vira detalhe: filete de 1 a 2 px e selo sobre terracota ou verde. Nunca letra, nunca fundo,
+     nunca sobre bege (1.4 a 1.8:1, o logo dourado some no bege e no caramelo do próprio PDF). */
+  --ml-caramelo:      #CBAC86;
+  --ml-ouro-1:        #E9D595;   /* ponta escura do gradiente */
+  --ml-ouro-2:        #F6ECB8;
+  --ml-ouro-3:        #FDFAE4;   /* ponta clara */
+  --ml-ouro:          linear-gradient(135deg, var(--ml-ouro-1) 0%, var(--ml-ouro-2) 52%, var(--ml-ouro-3) 100%);
+  --ml-line:          var(--ml-hair);   /* linha fina dos grafismos sobre o claro */
+
+  /* ---------- semântico ----------
+     Faz e não faz. A cor nunca vem sozinha: o rótulo escrito também diz. */
+  --ml-ok:            #2F6641;   /* 6.03:1 sobre o off-white */
+  --ml-erro:          #A03A34;   /* 5.93:1 sobre o off-white */
+
+  /* ---------- tipografia ----------
+     O PDF pede Lagu Sans (títulos) e Circe (texto), fontes comerciais que não temos em arquivo.
+     Substitutas declaradas, ambas OFL do Google Fonts, em assets/fonts/: Jost no lugar do desenho geométrico fino do
+     nome e dos títulos; Nunito Sans no lugar do texto corrido (humanista com terminais suaves, perto da Circe). */
+  --ml-display: 'Jost', 'Futura', 'Trebuchet MS', sans-serif;
+  --ml-body:    'Nunito Sans', system-ui, sans-serif;
+
+  /* Escala. Escolha de acessibilidade (legibilidade 50+, sem afirmar o público): o corpo é 19px, o piso de legenda é 16px. Nada abaixo de 15px existe nesta marca, rótulo incluso. */
+  --ml-t-display: clamp(32px, 4.4vw, 52px);
+  --ml-t-h2:      clamp(25px, 2.9vw, 34px);
+  --ml-t-h3:      21px;
+  --ml-t-lede:    22px;
+  --ml-t-corpo:   19px;
+  --ml-t-legenda: 16px;
+  --ml-t-rotulo:  15px;
+  --ml-t-botao:   18px;
+
+  --ml-lh-titulo:  1.2;
+  --ml-lh-corpo:   1.65;
+  --ml-lh-legenda: 1.6;
+
+  --ml-peso-display: 300;   /* Jost fino só no título grande: em 32px ou mais o traço fino ainda tem corpo */
+  --ml-peso-titulo:  400;   /* h2 e h3: acima do fino */
+  --ml-peso-corpo:   400;   /* Nunito Sans regular: o 300 afina demais para a legibilidade 50+ */
+  --ml-peso-rotulo:  700;
+  --ml-peso-botao:   600;
+
+  /* caixa-alta espaçada: o jeito do monograma e do selo de escrever o nome */
+  --ml-track-wordmark: .16em;
+  --ml-track-rotulo:   .12em;
+  --ml-track-titulo:   -.005em;
+
+  /* ---------- espaço ---------- */
+  --ml-e-1:  8px;
+  --ml-e-2: 14px;
+  --ml-e-3: 22px;
+  --ml-e-4: 36px;
+  --ml-e-5: 60px;
+  --ml-e-6: clamp(64px, 7vw, 108px);
+
+  --ml-toque: 48px;   /* alvo mínimo de toque (WCAG 2.5.5 pede 44) */
+
+  /* ---------- forma ----------
+     Cápsula: o PDF usa as palavras-chave em pílula de contorno fino. O arco é o laço do monograma virado janela de foto. */
+  --ml-r-btn:   999px;
+  --ml-r-campo: 14px;
+  --ml-r-foto:  22px;
+  --ml-r-arco:  999px 999px 22px 22px;
+
+  /* ---------- sombra: deslocada e macia, nunca halo ---------- */
+  --ml-sombra-btn:       0 10px 22px -12px rgba(38,48,42,.5), inset 0 1px 0 rgba(255,255,255,.18);
+  --ml-sombra-btn-hover: 0 16px 28px -12px rgba(38,48,42,.55), inset 0 1px 0 rgba(255,255,255,.22);
+  --ml-sombra-foto:      0 22px 34px -22px rgba(38,48,42,.45);
+
+  /* ---------- movimento ---------- */
+  --ml-ease: cubic-bezier(.2,.7,.2,1);   /* saída exponencial */
+  --ml-dur:  .35s;
+}
