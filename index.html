@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dra. Maria Luiza Terra, gastroenterologista em Montes Claros</title>
+<title>Dra. Maria Luiza Terra, gastroenterologista em Montes Claros</title>
 <!--
 Funcao: site da Dra. Maria Luiza Terra (gastroenterologista, CRM-MG 73963, RQE 58851), pagina unica na espinha do blueprint de LP de medico. Gerado por marketing-agency/sites/_shared/monta_site.py: nao se edita o index.html, edita-se este template e o copy.md.
 Data: 2026-11-09. Marca: external/doctors/marialuiza/wiki/concepts/marca-marialuiza (assets/tokens.css e copia de deploy; o master mora la). Icones: Lucide (licenca ISC), embutidos.
 -->
-<meta name="description" content="Gastroenterologista em Montes Claros. A Dra. Maria Luiza Terra atende intestino e fígado e lê o seu exame com você, na consulta. Marque pelo WhatsApp.">
+<meta name="description" content="Gastroenterologista em Montes Claros, com residência no Hospital das Clínicas da USP de Ribeirão Preto. Intestino preso, barriga inchada, TGO e TGP altos. Agende pelo WhatsApp.">
 <meta name="theme-color" content="#F6F1E9">
 <meta name="msapplication-TileColor" content="#995A37">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -17,8 +17,8 @@ Data: 2026-11-09. Marca: external/doctors/marialuiza/wiki/concepts/marca-marialu
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Dra. Maria Luiza Terra">
-<meta property="og:title" content="Dra. Maria Luiza Terra: intestino e fígado, explicados na consulta">
-<meta property="og:description" content="Gastroenterologista em Montes Claros. Ela lê o seu exame com você, junto com a sua história.">
+<meta property="og:title" content="Dra. Maria Luiza Terra: gastroenterologista com residência na USP, em Montes Claros">
+<meta property="og:description" content="Intestino preso, barriga inchada, fígado alterado no exame. Segundas de manhã, na Clínica Gastrus.">
 <meta property="og:image" content="https://fcamara1109.github.io/marialuiza-lp/assets/og-1200x630.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -68,7 +68,7 @@ Data: 2026-11-09. Marca: external/doctors/marialuiza/wiki/concepts/marca-marialu
   #wa-modal .avatar .on{position:absolute;right:1px;bottom:1px;width:13px;height:13px;border-radius:50%;background:var(--wa);border:2.5px solid var(--wa-head-b);}
   #wa-modal .who{display:flex;flex-direction:column;gap:2px;min-width:0;}
   #wa-modal .nm{font-family:var(--wa-head-font);font-weight:700;font-size:1.15rem;letter-spacing:-.01em;}
-  #wa-modal .cred{font-size:.72rem;font-weight:500;color:rgba(255,255,255,.92);line-height:1.35;}
+  #wa-modal .cred{display:block;margin:0;padding:0;border:0;font-size:.72rem;font-weight:500;color:rgba(255,255,255,.92);line-height:1.35;}  /* display/margin/padding/border: a LP pode ter .cred proprio (bloco de credenciais) e ele nao pode vazar pro modal */
   #wa-modal .online{display:flex;align-items:center;gap:.45rem;padding:.55rem 1.25rem;background:var(--wa-band);font-size:.74rem;font-weight:600;color:var(--wa-head-b);}
   #wa-modal .online .dot{width:7px;height:7px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 3px rgba(37,211,102,.25);}
   #wa-modal .wbody{padding:1.2rem 1.25rem 1.4rem;}
@@ -184,7 +184,8 @@ h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5
 .lede{font-size:1.375rem;line-height:1.55;color:var(--ml-ink-2)}
 .leg{font-size:1rem;line-height:1.6}
 .legal{font-size:.9375rem;line-height:1.5;color:var(--ml-ink-3)}
-.filete{display:block;width:56px;height:2px;margin-top:22px;background:var(--ml-accent);border-radius:2px}
+/* filete com gancho: a barra do T do monograma */
+.filete{display:block;width:96px;height:14px;margin-top:22px;background:var(--ml-accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 24' preserveAspectRatio='none'%3E%3Cpath d='M0 18H356C384 18 400 14 414 3' fill='none' stroke='black' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 24' preserveAspectRatio='none'%3E%3Cpath d='M0 18H356C384 18 400 14 414 3' fill='none' stroke='black' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
 
 /* ---------- botao capsula ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 30px;border:0;border-radius:var(--ml-r-btn);cursor:pointer;font-family:var(--ml-body);font-weight:var(--ml-peso-botao);font-size:1.125rem;line-height:1.2;color:var(--ml-on-accent);background:linear-gradient(180deg,var(--ml-accent) 0%,var(--ml-accent-deep) 100%);box-shadow:var(--ml-sombra-btn);transition:transform var(--ml-dur) var(--ml-ease),box-shadow var(--ml-dur) var(--ml-ease),background var(--ml-dur) var(--ml-ease)}
@@ -211,9 +212,11 @@ h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5
 .hero-copia{display:flex;flex-direction:column;gap:20px}
 .hero-acao{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:4px}
 .micro{font-size:1rem;line-height:1.5;color:var(--ml-ink-2)}
-.moldura{position:relative;width:min(78vw,330px);margin:8px auto 0;padding:0 14px 14px 0}
-.contorno{position:absolute;right:0;bottom:0;left:14px;top:14px;border:1.5px solid var(--ml-caramelo);border-radius:var(--ml-r-arco)}
-.arco{position:relative;aspect-ratio:4/5;border-radius:var(--ml-r-arco);overflow:hidden;background:var(--ml-paper-2);box-shadow:var(--ml-sombra-foto)}
+/* grafismo proprio (exploracoes/grafismos.html, opcao 1, Laco): janela de canto de cima reto e volta larga embaixo, linha fina terracota aberta no alto, deslocada para cima e para a esquerda */
+.moldura{position:relative;width:min(78vw,330px);margin:8px auto 0;padding:16px 0 0 16px}
+.contorno{position:absolute;left:0;top:0;width:calc(100% - 16px);height:calc(100% - 16px);overflow:visible;pointer-events:none}
+.contorno path{fill:none;stroke:var(--ml-accent);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.arco{position:relative;aspect-ratio:4/5;border-radius:var(--ml-r-laco);overflow:hidden;background:var(--ml-paper-2);box-shadow:var(--ml-sombra-foto)}
 .arco img{width:100%;height:100%;object-fit:cover;object-position:56% 96%;transform:scale(1.12);transform-origin:56% 82%}
 
 /* ---------- barra de autoridade: tres fatos, cada um com seu icone ---------- */
@@ -246,7 +249,7 @@ h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5
 .porque-grid{display:grid;gap:34px}
 .foto{border-radius:var(--ml-r-foto);overflow:hidden;box-shadow:var(--ml-sombra-foto);background:var(--ml-paper-2)}
 .foto img{width:100%;height:100%;object-fit:cover}
-.porque .foto{aspect-ratio:4/3.4}
+.porque .foto{aspect-ratio:4/3;max-width:420px}
 .porque .foto img{object-position:60% 30%}
 .porque-texto{display:flex;flex-direction:column;gap:20px}
 .passos{display:grid;gap:0;margin-top:14px}
@@ -266,6 +269,15 @@ h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5
 .cred:last-child{border-bottom:1px solid rgba(246,241,233,.34)}
 .cred .ico{width:36px;height:36px;margin-top:2px;color:var(--ml-ouro-1)}
 .cred p{margin-top:4px}
+
+/* ---------- historia: linha do tempo com o fio do monograma (traco continuo que termina em gancho) ---------- */
+.historia{padding:78px 0 84px;background:var(--ml-paper)}
+.linha{position:relative;display:grid;gap:30px;margin-top:40px;padding-left:34px}
+.linha::before{content:"";position:absolute;left:7px;top:8px;bottom:26px;width:1.5px;background:var(--ml-accent)}
+.linha::after{content:"";position:absolute;left:7px;bottom:12px;width:24px;height:16px;border-left:1.5px solid var(--ml-accent);border-bottom:1.5px solid var(--ml-accent);border-bottom-left-radius:16px}
+.marco{position:relative;max-width:46rem}
+.marco::before{content:"";position:absolute;left:-34px;top:11px;width:15px;height:15px;border:1.5px solid var(--ml-accent);border-radius:50%;background:var(--ml-paper)}
+.marco p{color:var(--ml-ink-2)}
 
 /* ---------- faq ---------- */
 .faq{padding:78px 0 84px}
@@ -311,14 +323,11 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 /* ---------- WhatsApp: flutuante (desktop) e barra fixa (celular) ---------- */
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;justify-content:center;background:var(--ml-paper);border-top:1px solid var(--ml-hair);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -12px 24px -18px rgba(38,48,42,.4)}
 .sticky .btn{width:min(100%,360px)}
-.js .sticky{transition:transform .3s ease,visibility 0s}
-.js .sticky:not(.on){transform:translateY(100%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
-@media (prefers-reduced-motion:reduce){.js .sticky,.js .sticky:not(.on){transition:none}}
 .wafloat{display:none}
 
 /* ---------- movimento: um momento autoral (o arco sobe, o texto chega depois). Sem JS nada esconde ---------- */
-@keyframes arco-sobe{from{clip-path:inset(100% 0 0 0 round 999px 999px 22px 22px)}to{clip-path:inset(0 0 0 0 round 999px 999px 22px 22px)}}
-@keyframes contorno-chega{from{opacity:0;transform:translate(10px,10px)}to{opacity:1;transform:none}}
+@keyframes arco-sobe{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes contorno-chega{from{opacity:0;transform:translate(-10px,-10px)}to{opacity:1;transform:none}}
 @keyframes texto-chega{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .js .arco{animation:arco-sobe 1.1s .15s var(--ml-ease) both}
 .js .contorno{animation:contorno-chega .9s .75s var(--ml-ease) both}
@@ -326,6 +335,16 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 .js .hero-copia>:nth-child(2){animation-delay:.1s}
 .js .hero-copia>:nth-child(3){animation-delay:.2s}
 .js .hero-copia>:nth-child(4){animation-delay:.3s}
+
+/* ---------- celular: retrato pequeno com o registro ao lado, antes do titulo (o rosto fica na primeira dobra) ---------- */
+@media (max-width:879px){
+  .hero{padding-top:20px}
+  .hero-grid{grid-template-columns:112px minmax(0,1fr);column-gap:16px;row-gap:0;align-items:center}
+  .hero-copia{display:contents}
+  .moldura{grid-column:1;grid-row:1;width:112px;margin:0;padding:8px 0 0 8px}
+  .hero-copia>*{grid-column:1/-1;margin-top:18px}
+  .hero-copia>.legal{grid-column:2;grid-row:1;margin-top:0}
+}
 
 /* ---------- tela larga ---------- */
 @media (min-width:880px){
@@ -338,8 +357,8 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
   .hero{padding:72px 0 88px}
   .hero-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:72px;align-items:center}
   .hero-copia{gap:26px}
-  .moldura{width:100%;max-width:440px;margin:0 0 0 auto;padding:0 20px 20px 0}
-  .contorno{left:20px;top:20px}
+  .moldura{width:100%;max-width:440px;margin:0 0 0 auto;padding:20px 0 0 20px}
+  .contorno{width:calc(100% - 20px);height:calc(100% - 20px)}
   .fatos{padding:0}
   .fatos ul{grid-template-columns:repeat(3,minmax(0,1fr))}
   .fatos li{padding:26px 28px;border-top:0}
@@ -353,11 +372,14 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
   .faixa-tag{min-height:440px;align-items:center}
   .faixa-tag p{margin-top:0;padding-right:52%}
   .porque{padding:112px 0 120px}
-  .porque-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:80px;align-items:start}
-  .porque .foto{position:sticky;top:110px;aspect-ratio:4/4.6}
+  .porque-grid{grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:80px;align-items:start}
+  .porque .foto{position:sticky;top:110px;aspect-ratio:4/4.4;max-width:none}
   .prova{padding:112px 0 120px}
   .prova-grid{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:88px;align-items:center}
   .prova .foto{max-width:none}
+  .historia{padding:108px 0 112px}
+  .linha{margin-top:0}
+  .historia .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
   .faq{padding:108px 0 112px}
   .faq .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
   .faq .lista{margin-top:0}
@@ -382,17 +404,30 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
 }
 </style>
+<style>
+/* so esconde depois que o script confirma que roda (html.rv) */
+.rv [data-rv]:not(.in){opacity:0;transform:translateY(18px)}
+.rv [data-rv]{transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv [data-rv].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv [data-rv]:not(.in){opacity:1;transform:none}.rv [data-rv]{transition:none}}
+@media print{.rv [data-rv]:not(.in){opacity:1;transform:none}}
+</style>
+<style>
+[data-sticky]{transition:transform .3s ease,visibility 0s}
+[data-sticky].sticky-off{transform:translateY(110%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
+@media (prefers-reduced-motion:reduce){[data-sticky],[data-sticky].sticky-off{transition:none}}
+</style>
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="topo" data-bloco="header">
   <div class="wrap">
-    <a class="marca" href="#conteudo" aria-label="Dra. Maria Luiza Terra, Gastroenterologista em Montes Claros">
+    <a class="marca" href="#conteudo" aria-label="Dra. Maria Luiza Terra, Gastroenterologista em Montes Claros">
       <img src="assets/simbolo-claro.svg" width="46" height="46" alt="">
-      <span class="wm"><b>Dra. Maria Luiza Terra</b><span>Gastroenterologista em Montes Claros</span></span>
+      <span class="wm"><b>Dra. Maria Luiza Terra</b><span>Gastroenterologista em Montes Claros</span></span>
     </a>
-    <button class="btn btn-linha" type="button" data-wa>Marcar consulta</button>
+    <button class="btn btn-linha" type="button" data-wa>Agendar</button>
   </div>
 </header>
 
@@ -401,88 +436,88 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 <section class="hero" data-bloco="hero">
   <div class="wrap hero-grid">
     <div class="hero-copia">
-      <h1>Barriga inchada, intestino preso ou exame de fígado alterado: o que investigar, e em que ordem.</h1>
-      <p class="lede">A Dra. Maria Luiza, gastroenterologista em Montes Claros, lê o exame com você, junto com a sua história.</p>
+      <h1>Intestino preso, barriga inchada, fígado alterado no exame: gastroenterologista com residência na USP.</h1>
+      <p class="lede">Formada na FIP-Moc com o prêmio Doutor Hermes de Paula de melhor desempenho acadêmico. Na consulta, ela lê seus exames e decide o tratamento ou o próximo exame.</p>
       <div class="hero-acao">
-        <button class="btn" type="button" data-wa>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
-        <p class="micro">Você só conversa com a equipe e combina o horário. Sem compromisso.</p>
+        <button class="btn" type="button" data-wa data-sticky-alvo>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        <p class="micro">A equipe da Clínica Gastrus responde no WhatsApp e confirma o horário.</p>
       </div>
-      <p class="legal">Dra. Maria Luiza Terra, Médica Gastroenterologista, CRM-MG 73963, RQE 58851.</p>
+      <p class="legal">Dra. Maria Luiza Terra, Médica Gastroenterologista, CRM-MG 73963, RQE 58851.</p>
     </div>
     <figure class="moldura">
-      <span class="contorno" aria-hidden="true"></span>
-      <div class="arco"><img src="fotos/ml-hero.jpg" width="900" height="966" alt="Dra. Maria Luiza Terra sorrindo, de blusa terracota, em fundo claro" fetchpriority="high" decoding="async"></div>
+      <svg class="contorno" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M62 0H4A4 3.2 0 0 0 0 3.2V96.8A4 3.2 0 0 0 4 100H54A46 36 0 0 0 100 64V30C100 25 96 21 90 22"/></svg>
+      <div class="arco"><img src="fotos/ml-hero.jpg" width="900" height="966" alt="Dra. Maria Luiza Terra sorrindo, de blusa terracota, em fundo claro" fetchpriority="high" decoding="async"></div>
     </figure>
   </div>
 </section>
 
 <section class="fatos" data-bloco="beneficios" aria-label="Como funciona o atendimento">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <ul>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Agenda às segundas, de manhã. A equipe confirma pelo WhatsApp</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Consulta de cerca de 30 minutos, horário pontual</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/></svg><span>Gastroenterologia: residência no Hospital das Clínicas de Ribeirão Preto</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Residência de Gastroenterologia no HC da USP de Ribeirão Preto, 2021 a 2023</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Dois RQEs: Gastroenterologia e Clínica Médica</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/></svg><span>Segundas, das 8h às 11h. Consulta de cerca de 30 minutos</span></li>
     </ul>
   </div>
 </section>
 
 <section class="servicos" data-bloco="servicos">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <div class="cab">
-      <h2>O que a Dra. Maria Luiza atende</h2>
-      <p>Intestino, fígado e exames: três situações que levam as pessoas à consulta com a Dra. Maria Luiza.</p>
+      <h2>Três queixas, e o que a consulta faz com cada uma</h2>
+      <p>Para cada queixa: o que pode estar por trás, que exame ela lê ou pede, e o que decide.</p>
     </div>
     <ul class="portas">
       <li class="porta">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
-        <h3>Barriga inchada e intestino preso</h3>
-        <p>Na consulta, a Dra. Maria Luiza ouve a sua história e explica quais exames fazem sentido para o seu caso.</p>
+        <h3>Intestino preso e barriga inchada</h3>
+        <p>Intestino irritável, intolerância à lactose, excesso de bactérias no intestino delgado (SIBO) e doença celíaca dão sintomas parecidos. Na consulta, ela aponta o mais provável no seu caso, diz se precisa de exame e com que tratamento começar.</p>
       </li>
       <li class="porta">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-        <h3>Exame de fígado alterado ou gordura no ultrassom</h3>
-        <p>Exame de fígado alterado não é um diagnóstico. O que ele significa depende da sua história. Na consulta, ela olha o resultado com você.</p>
+        <h3>TGO, TGP ou GGT altos, ou gordura no fígado no ultrassom</h3>
+        <p>Enzima alta vem de causas diferentes: gordura, álcool, remédio, vírus. Ela lê os exames que você já tem, pede o que falta (sorologia de hepatite, elastografia, quando cabe) e define o que tratar e quando repetir.</p>
       </li>
       <li class="porta">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-        <h3>Colonoscopia e teste de SIBO: para quem serve</h3>
-        <p>SIBO é o excesso de bactérias no intestino delgado. Na consulta, a Dra. Maria Luiza explica, para cada exame, se ele faz sentido para o seu caso e quando pedir.</p>
+        <h3>Colonoscopia e teste de SIBO: quando pedir</h3>
+        <p>Colonoscopia entra por sinal de alerta, idade ou caso na família. O teste respiratório de SIBO entra por barriga inchada que não cede. Ela pede o exame quando o resultado muda o tratamento, e lê o laudo na consulta.</p>
       </li>
     </ul>
     <div class="fecho">
-      <p>Reconheceu o seu caso? Marque pelo WhatsApp.</p>
-      <button class="btn" type="button" data-wa>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      <p>Uma dessas é a sua? Agende pelo WhatsApp.</p>
+      <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
     </div>
   </div>
 </section>
 
 <div class="faixa-tag">
   <img src="fotos/ml-faixa.jpg" width="1200" height="1119" alt="" loading="lazy" decoding="async">
-  <p>Intestino e fígado, explicados na consulta.</p>
+  <p>Intestino e fígado. Exame lido, decisão tomada na consulta.</p>
 </div>
 
 <section class="porque" data-bloco="porque">
-  <div class="wrap porque-grid">
+  <div class="wrap porque-grid" data-rv>
     <figure class="foto"><img src="fotos/ml-janela.jpg" width="900" height="817" alt="" loading="lazy" decoding="async"></figure>
     <div class="porque-texto">
       <div class="cab">
-        <h2>Como é a consulta com a Dra. Maria Luiza</h2>
+        <h2>Como é a consulta: cerca de 30 minutos, com o exame na mesa</h2>
         <span class="filete" role="presentation"></span>
       </div>
-      <p>Um exame sozinho diz pouco. O que o resultado significa depende de desde quando você sente, do que piora e do que já foi feito. Por isso a Dra. Maria Luiza lê o exame junto com a sua história, na consulta.</p>
-      <p>A Dra. Maria Luiza deixa de fora, de propósito, o que não dá para fazer com cuidado: opinar sobre exame por mensagem e prometer resultado. Quem escreve recebe ajuda para marcar a consulta, não palpite sobre o exame.</p>
+      <p>Exame alterado sozinho não fecha diagnóstico. A Dra. Maria Luiza cruza o resultado com o que você sente, desde quando, e com os remédios que usa. Você sai com uma de três: tratamento, exame que falta ou retorno com data.</p>
+      <p>O que a consulta não cobre: endoscopia alta, atendimento de criança e opinião sobre exame por mensagem. Nesses casos, a equipe diz para onde ir.</p>
       <ol class="passos">
         <li class="passo">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
-          <div><h3>Leve o seu exame</h3><p>Pode ser impresso ou no celular. Se tiver exames antigos, leve também.</p></div>
+          <div><h3>Leve os exames</h3><p>TGO, TGP, ultrassom, colonoscopia antiga: impressos ou no celular. Exame antigo mostra se o valor subiu, caiu ou parou.</p></div>
         </li>
         <li class="passo">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-          <div><h3>Leitura junto com você</h3><p>Você acompanha a leitura do resultado, com a sua história junto, e pergunta o que quiser.</p></div>
+          <div><h3>Uma decisão no fim</h3><p>Tratamento, exame que falta ou retorno com data. Você sai sabendo qual, e por quê.</p></div>
         </li>
         <li class="passo">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-          <div><h3>Cada exame, explicado</h3><p>Cada exame que ela pedir vem com explicação: por que foi pedido e o que mostra.</p></div>
+          <div><h3>Cada pedido com motivo</h3><p>Exame que ela pedir vem com o motivo e com o que o resultado vai mudar no tratamento.</p></div>
         </li>
       </ol>
     </div>
@@ -490,47 +525,61 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 </section>
 
 <section class="prova" data-bloco="prova">
-  <div class="wrap prova-grid">
+  <div class="wrap prova-grid" data-rv>
     <figure class="foto"><img src="fotos/ml-parede.jpg" width="800" height="1117" alt="" loading="lazy" decoding="async"></figure>
     <div>
       <div class="cab">
-        <h2>Formação e registro, com hospital e ano</h2>
-        <p>Instituição, período e número de registro: só o que dá para conferir.</p>
+        <h2>Formação: duas residências, dois RQEs</h2>
+        <p>Instituição, período e registro. Tudo confere no CRM-MG e no currículo Lattes.</p>
       </div>
       <ul class="creds">
         <li class="cred">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/></svg>
-          <div><h3>Residência de Gastroenterologia</h3><p>Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto (USP), de 2021 a 2023.</p></div>
+          <div><h3>Residência de Gastroenterologia</h3><p>Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto, USP (HC-FMRP-USP), 2021 a 2023. RQE 58851.</p></div>
         </li>
         <li class="cred">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
-          <div><h3>Residência de Clínica Médica</h3><p>Unimontes, de 2019 a 2021. RQE 68062 de Clínica Médica.</p></div>
+          <div><h3>Residência de Clínica Médica</h3><p>Hospital Universitário Clemente de Faria, Unimontes, 2019 a 2021. RQE 68062.</p></div>
         </li>
         <li class="cred">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <div><h3>Registro profissional</h3><p>CRM-MG 73963. RQE 58851 de Gastroenterologia.</p></div>
+          <div><h3>Registro profissional</h3><p>CRM-MG 73963. RQE 58851 de Gastroenterologia e RQE 68062 de Clínica Médica.</p></div>
         </li>
         <li class="cred">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-          <div><h3>Graduação em Medicina</h3><p>FIP-Moc, formada em 2017.</p></div>
+          <div><h3>Graduação em Medicina</h3><p>FIP-Moc, 2012 a 2017. Prêmio "Doutor Hermes de Paula - Melhor desempenho acadêmico", Faculdades Integradas Pitágoras, 2017.</p></div>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="faq" data-bloco="faq">
-  <div class="wrap">
+<section class="historia" data-bloco="historia">
+  <div class="wrap" data-rv>
     <div class="cab">
-      <h2>Perguntas antes de marcar</h2>
+      <h2>De Montes Claros a Ribeirão Preto, e de volta</h2>
+      <span class="filete" role="presentation"></span>
+    </div>
+    <div class="linha">
+      <div class="marco"><p>A Dra. Maria Luiza se formou em Medicina na FIP-Moc, em 2017, com o prêmio Doutor Hermes de Paula de melhor desempenho acadêmico. Em 2018, atuou como médica de família pela residência de Medicina de Família e Comunidade da Unimontes.</p></div>
+      <div class="marco"><p>De 2019 a 2021, fez residência de Clínica Médica no Hospital Universitário Clemente de Faria, da Unimontes. Daí vem o segundo RQE, 68062.</p></div>
+      <div class="marco"><p>De 2021 a 2023, fez residência de Gastroenterologia no Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto, da USP. Hoje atende intestino e fígado na Clínica Gastrus, em Montes Claros, às segundas de manhã.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" data-bloco="faq">
+  <div class="wrap" data-rv>
+    <div class="cab">
+      <h2>Perguntas antes de agendar</h2>
       <span class="filete" role="presentation"></span>
     </div>
     <div class="lista">
-      <details open><summary>Devo levar meus exames para a consulta?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Sim, se você tiver. Leve impresso ou no celular. A Dra. Maria Luiza lê o resultado com você, junto com a sua história.</p></details>
+      <details open><summary>Devo levar meus exames para a consulta?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Sim, todos, inclusive os antigos. Impressos ou no celular. Comparar resultados mostra se o valor subiu, caiu ou ficou parado.</p></details>
       <details><summary>Quanto dura a consulta?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Cerca de 30 minutos, em horário pontual.</p></details>
-      <details><summary>Ela faz colonoscopia ou teste de SIBO?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Essa informação a equipe confirma pelo WhatsApp. Na consulta, a Dra. Maria Luiza explica se o exame faz sentido para o seu caso.</p></details>
-      <details><summary>Posso mandar meu exame pelo WhatsApp para ela avaliar?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não. Por mensagem, ninguém interpreta exame sem conhecer a sua história. Leve o resultado à consulta: a Dra. Maria Luiza lê com você.</p></details>
-      <details><summary>Como marco a consulta?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Pelo WhatsApp. A equipe confirma o horário com você. A agenda da Dra. Maria Luiza é às segundas, de manhã.</p></details>
+      <details><summary>Ela faz colonoscopia ou teste de SIBO?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Ela indica quando o exame faz sentido e lê o resultado na consulta. Se o exame é feito na própria Gastrus, a equipe confirma pelo WhatsApp.</p></details>
+      <details><summary>Posso mandar meu exame pelo WhatsApp para ela avaliar?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não. Por mensagem, o exame chega sem o resto: sintomas, remédios, exames anteriores. Leve o resultado à consulta.</p></details>
+      <details><summary>Como agendo a consulta?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Pelo WhatsApp da Clínica Gastrus. A agenda da Dra. Maria Luiza é às segundas, das 8h às 11h, e a equipe confirma o horário.</p></details>
       <details><summary>E se eu tiver um sinal de alerta agora?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não espere a consulta. Vômito com sangue, fezes pretas ou com sangue vivo, dor forte na barriga que não passa, pele e olhos amarelados de repente com febre ou desmaio: vá ao pronto-atendimento mais perto ou ligue 192.</p></details>
     </div>
   </div>
@@ -538,10 +587,10 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 
 <section class="local" data-bloco="local">
   <div class="local-amb"><img src="fotos/ml-ambiente-espelho.jpg" width="1200" height="525" alt="" loading="lazy" decoding="async"></div>
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <div class="cab">
       <h2>Onde e quando é a consulta</h2>
-      <p>A Dra. Maria Luiza atende na Clínica Gastrus, em Montes Claros.</p>
+      <p>A Dra. Maria Luiza atende na Clínica Gastrus, em Montes Claros.</p>
     </div>
     <dl>
       <div class="linha-l">
@@ -550,23 +599,23 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
       </div>
       <div class="linha-l">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-        <div><dt>Agenda</dt><dd>Às segundas, de manhã. Os horários são combinados pelo WhatsApp.</dd></div>
+        <div><dt>Agenda</dt><dd>Segundas, das 8h às 11h. O horário é combinado pelo WhatsApp.</dd></div>
       </div>
       <div class="linha-l">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <div><dt>Consulta</dt><dd>Cerca de 30 minutos, horário pontual. Chegue uns minutinhos antes.</dd></div>
+        <div><dt>Consulta</dt><dd>Cerca de 30 minutos, horário pontual. Chegue alguns minutos antes.</dd></div>
       </div>
     </dl>
-    <button class="btn" type="button" data-wa>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+    <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
   </div>
 </section>
 
 <section class="cta-final" data-bloco="cta-final">
-  <div class="wrap cta-grid">
+  <div class="wrap cta-grid" data-rv>
     <div class="cta-texto">
-      <h2>Leve o exame. A Dra. Maria Luiza lê com você.</h2>
-      <p>Fale com a equipe pelo WhatsApp e combine o seu horário.</p>
-      <button class="btn btn-claro" type="button" data-wa>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      <h2>Exame alterado parado na gaveta não responde nada.</h2>
+      <p>Leve o resultado a uma gastroenterologista. Agenda às segundas de manhã, na Clínica Gastrus.</p>
+      <button class="btn btn-claro" type="button" data-wa>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
     </div>
     <figure class="foto"><img src="fotos/ml-sofa.jpg" width="900" height="929" alt="" loading="lazy" decoding="async"></figure>
   </div>
@@ -576,12 +625,12 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 
 <footer class="rodape" data-bloco="rodape">
   <div class="wrap">
-    <a class="marca" href="#conteudo" aria-label="Dra. Maria Luiza Terra, Gastroenterologista em Montes Claros">
+    <a class="marca" href="#conteudo" aria-label="Dra. Maria Luiza Terra, Gastroenterologista em Montes Claros">
       <img src="assets/simbolo-escuro.svg" width="46" height="46" alt="" loading="lazy" decoding="async">
-      <span class="wm"><b>Dra. Maria Luiza Terra</b><span>Gastroenterologista em Montes Claros</span></span>
+      <span class="wm"><b>Dra. Maria Luiza Terra</b><span>Gastroenterologista em Montes Claros</span></span>
     </a>
     <div>
-      <p class="leg">Dra. Maria Luiza Terra, Médica Gastroenterologista, CRM-MG 73963, RQE 58851 (gastroenterologia), RQE 68062 (clínica médica).</p>
+      <p class="leg">Dra. Maria Luiza Terra, Médica Gastroenterologista, CRM-MG 73963, RQE 58851 (gastroenterologia), RQE 68062 (clínica médica).</p>
       <p class="leg">Clínica Gastrus, R. Eng. João Antônio Pimenta, 163, Cidade Santa Maria, Montes Claros</p>
       <p class="leg">Este site é informativo e não substitui consulta médica. Em caso de sinal de alerta, vá ao pronto-atendimento ou ligue 192.</p>
     </div>
@@ -594,12 +643,11 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 </button>
 
 <!-- barra fixa (celular). Sem JavaScript o widget nao abre: o noscript mostra um link simples (numero e texto saem do site.json e do copy.md). -->
-<div class="sticky">
-  <button class="btn" type="button" data-wa>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
-  <noscript><a class="btn" href="https://wa.me/5538999865405?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20marcar%20consulta%20com%20a%20Dra.%20Maria%20Luiza.">Marcar consulta pelo WhatsApp</a></noscript>
+<div class="sticky" data-sticky>
+  <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+  <noscript><a class="btn" href="https://wa.me/5538999865405?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20agendar%20consulta%20com%20a%20Dra.%20Maria%20Luiza.">Agendar pelo WhatsApp</a></noscript>
 </div>
 
-<script>(function(){var s=document.querySelector('.sticky'),b=document.querySelector('.hero-acao .btn');if(!s||!b||!('IntersectionObserver' in window)){if(s)s.classList.add('on');return}new IntersectionObserver(function(e){s.classList.toggle('on',!e[0].isIntersecting)},{threshold:0.6}).observe(b)})()</script>
 <script>
 (function(){
 var COOKIE_NAME = 'tracker';
@@ -641,7 +689,7 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
       </div>
       <div class="online"><span class="dot"></span>Atendimento pelo WhatsApp da Clínica Gastrus</div>
       <div class="wbody">
-        <div class="lead-line">Marcar consulta</div>
+        <div class="lead-line">Agendar consulta</div>
         <label class="field">
           <span class="lbl">Seu WhatsApp</span>
           <input id="wa-phone" type="tel" inputmode="tel" placeholder="(00) 0 0000-0000" autocomplete="tel" data-1p-ignore data-lpignore="true" aria-describedby="wa-dica" data-wa-err="Digite seu WhatsApp com DDD, por exemplo 38 99999-0000.">
@@ -681,7 +729,7 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
   var WEBHOOK_URL = 'https://n8n.srv1732310.hstgr.cloud/webhook/widget-lead?t=marialuiza';
   // UNICO lugar do numero do WhatsApp (digitos com DDI). Trocou o numero? Troque so esta linha e o noscript: o link e o numero exibido no aviso saem daqui.
   var WA_PHONE = '5538999865405';
-  var WA = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent('Oi, vim pelo site e quero marcar consulta com a Dra. Maria Luiza.');
+  var WA = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent('Oi, vim pelo site e quero agendar consulta com a Dra. Maria Luiza.');
   (function(){ var d = WA_PHONE.replace(/\D/g, ''); var f = '(' + d.slice(2,4) + ') ' + d.slice(4,5) + ' ' + d.slice(5,9) + '-' + d.slice(9); document.querySelectorAll('[data-wa-num]').forEach(function(n){ n.textContent = f; }); })();
   var modal = document.getElementById('wa-modal'), s1 = document.getElementById('wa-s1'), s2 = document.getElementById('wa-s2');
   function show(el){ s1.classList.remove('active'); s2.classList.remove('active'); el.classList.add('active'); var w=modal.querySelector('.widget'); if(w) w.scrollTop=0; }
@@ -716,6 +764,25 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
   document.getElementById('wa-last-step').addEventListener('click', function(){
     window.open(WA, '_blank');
   });
+})();
+</script>
+<script>
+(function(){
+  var els = document.querySelectorAll('[data-rv]');
+  if(!els.length || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var h = document.documentElement;
+  h.classList.add('rv');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+  /* impressao: mostra tudo */
+  window.addEventListener('beforeprint', function(){ els.forEach(function(e){ e.classList.add('in'); }); });
+})();
+</script>
+<script>
+(function(){
+  var s=document.querySelector('[data-sticky]'), b=document.querySelector('[data-sticky-alvo]');
+  if(!s||!b||!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(e){ s.classList.toggle('sticky-off', e[0].isIntersecting); }, {threshold:.6}).observe(b);
 })();
 </script>
 </body>

@@ -110,6 +110,7 @@
   --ml-r-campo: 14px;
   --ml-r-foto:  22px;
   --ml-r-arco:  999px 999px 22px 22px;
+  --ml-r-laco:  4% 4% 46% 4% / 3.2% 3.2% 36% 3.2%;   /* janela de foto da Maria Luiza: canto de cima reto (haste do M), volta larga embaixo (S). Grafismo próprio: exploracoes/grafismos.html */
 
   /* ---------- sombra: deslocada e macia, nunca halo ---------- */
   --ml-sombra-btn:       0 10px 22px -12px rgba(38,48,42,.5), inset 0 1px 0 rgba(255,255,255,.18);
