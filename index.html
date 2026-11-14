@@ -154,7 +154,7 @@ p{text-wrap:pretty}
 
 /* ---------- tipografia: a escala sai dos tokens da marca ---------- */
 h1{font-family:var(--ml-display);font-weight:var(--ml-peso-display);font-size:clamp(32px,4.4vw,52px);line-height:1.18;letter-spacing:var(--ml-track-titulo)}
-h2{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:clamp(32px,2.6vw + 14px,44px);line-height:1.15;letter-spacing:var(--ml-track-titulo)}
+h2{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:clamp(27px,2.4vw + 18px,44px);line-height:1.15;letter-spacing:var(--ml-track-titulo)}
 h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5rem;line-height:1.3}
 .leg{font-size:1rem;line-height:1.6}
 .legal{font-size:.9375rem;line-height:1.5;color:var(--ml-ink-3)}
@@ -230,10 +230,17 @@ h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5
 .porque .foto{aspect-ratio:4/3;max-width:420px}
 .porque .foto img{object-position:60% 30%}
 .porque-texto{display:flex;flex-direction:column;gap:20px}
-.passos{display:grid;gap:0;margin-top:14px}
-.passo{display:flex;gap:16px;padding:20px 0;border-top:1px solid rgba(38,48,42,.28)}
-.passo .ico{width:36px;height:36px;margin-top:2px;color:var(--ml-ink)}
-.passo h3{margin-bottom:4px}
+/* ---------- depois: o caminho do WhatsApp ate a decisao. O numero carrega informacao (a ordem dos passos), por isso existe ---------- */
+.depois{padding:72px 0 76px;background:var(--ml-paper)}
+.etapas{display:grid;margin-top:36px;counter-reset:etapa}
+.etapa{position:relative;display:grid;align-content:start;grid-template-columns:44px minmax(0,1fr);column-gap:18px;row-gap:4px;padding-bottom:28px}
+.etapa::before{counter-increment:etapa;content:counter(etapa);grid-row:1 / span 2;position:relative;z-index:1;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ml-accent);background:var(--ml-paper);color:var(--ml-accent-deep);font-family:var(--ml-display);font-size:1.25rem;line-height:1}
+.etapa:not(:last-child)::after{content:"";position:absolute;left:21px;top:44px;bottom:0;width:1.5px;background:var(--ml-accent)}
+.etapa:last-child{padding-bottom:0}
+.etapa:last-child::before{background:var(--ml-accent);border-color:var(--ml-accent);color:var(--ml-on-accent)}
+.etapa h3{padding-top:6px}
+.etapa p{color:var(--ml-ink-2)}
+.depois .btn{margin-top:34px}
 
 /* ---------- prova: faixa verde, credencial verificavel ---------- */
 .prova{position:relative;background:var(--ml-verde);color:var(--ml-on-verde);padding:84px 0 92px}
@@ -369,6 +376,11 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
   .prova{padding:112px 0 120px}
   .prova-grid{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:88px;align-items:center}
   .prova .foto{max-width:none}
+  .depois{padding:104px 0 108px}
+  .etapas{grid-template-columns:repeat(4,minmax(0,1fr));gap:36px;margin-top:56px}
+  .etapa{grid-template-columns:minmax(0,1fr);row-gap:10px;padding-bottom:0}
+  .etapa::before{grid-row:auto;margin-bottom:8px}
+  .etapa:not(:last-child)::after{left:58px;right:-22px;top:21px;bottom:auto;width:auto;height:1.5px}
   .historia{padding:108px 0 112px}
   .linha{margin-top:0}
   .historia .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
@@ -452,9 +464,9 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 <section class="fatos" data-bloco="beneficios" aria-label="Como funciona o atendimento">
   <div class="wrap" data-rv>
     <ul>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Agendamento pelo WhatsApp da Clínica Gastrus</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segundas, das 8h às 11h. Consulta de cerca de 30 minutos</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/></svg><span>Clínica Gastrus, Cidade Santa Maria, Montes Claros</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Marque pelo WhatsApp da Clínica Gastrus</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segundas, das 8h às 11h, horário pontual</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v4"/><path d="M14 14h-4"/><path d="M14 18h-4"/><path d="M14 8h-4"/><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"/><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/></svg><span>Atendo os convênios da Gastrus. A equipe confirma o seu</span></li>
     </ul>
   </div>
 </section>
@@ -462,28 +474,28 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 <section class="servicos" data-bloco="servicos">
   <div class="wrap" data-rv>
     <div class="cab">
-      <h2>Três queixas, e o que a consulta faz com cada uma</h2>
-      <p>Para cada queixa: o que pode estar por trás, que exame ela lê ou pede, e o que decide.</p>
+      <h2>O que pode ser: mais de uma causa por queixa</h2>
+      <p>Para cada queixa: o que pode estar por trás, por que um exame entra e o que ele mostra e não mostra.</p>
     </div>
     <ul class="portas">
       <li class="porta">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
-        <h3>Intestino preso e barriga inchada</h3>
-        <p>Intestino irritável, intolerância à lactose, excesso de bactérias no intestino delgado (SIBO) e doença celíaca dão sintomas parecidos. Por isso o nome que você ouviu pode não ser o seu. Na consulta, ela aponta o mais provável no seu caso, diz se precisa de exame e com que tratamento começar.</p>
+        <h3>Barriga inchada e intestino preso</h3>
+        <p>Intestino irritável, intolerância à lactose, SIBO (excesso de bactérias no intestino) e doença celíaca dão sintomas parecidos. Intestino irritável não aparece em exame: quem aponta é a sua história.</p>
       </li>
       <li class="porta">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-        <h3>TGO, TGP ou GGT altos, ou gordura no fígado no ultrassom</h3>
-        <p>Enzima alta vem de causas diferentes: gordura, álcool, remédio, vírus. O ultrassom mostra se há gordura, mas não mostra o quanto o fígado está rígido. Ela lê os exames que você já tem, pede o que falta (sorologia de hepatite, elastografia, quando cabe) e define o que tratar e quando repetir.</p>
+        <h3>Gordura no fígado ou TGO alta</h3>
+        <p>Enzima alta vem de gordura, álcool, remédio ou vírus. O ultrassom mostra a gordura, mas não mostra se o fígado endureceu. Eu leio seus exames e peço o que falta.</p>
       </li>
       <li class="porta">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-        <h3>Colonoscopia e teste de SIBO: quando pedir</h3>
-        <p>Colonoscopia entra por sinal de alerta, idade ou caso na família. O teste respiratório de SIBO entra por barriga inchada que não cede. Ela indica o exame quando o caso pede e lê o laudo com você na consulta.</p>
+        <h3>Colonoscopia e teste de SIBO</h3>
+        <p>Peço colonoscopia por sinal de alerta, idade ou caso na família. O teste respiratório de SIBO, quando a barriga inchada não cede. Faço os dois na própria Clínica Gastrus. Exame normal também conta: ajuda a afastar causas.</p>
       </li>
     </ul>
     <div class="fecho">
-      <p>Uma dessas é a sua? Agende pelo WhatsApp.</p>
+      <p>Reconheceu a sua? Me conta no WhatsApp.</p>
       <button class="btn" type="button" data-wa>Falar no WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
     </div>
   </div>
@@ -499,26 +511,28 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
     <figure class="foto"><img src="fotos/ml-ia-blazer.jpg" width="928" height="1152" alt="" loading="lazy" decoding="async"></figure>
     <div class="porque-texto">
       <div class="cab">
-        <h2>Sintoma parecido, causa diferente</h2>
+        <h2>Já tomou remédio e não passou? Começo pela sua história</h2>
         <span class="filete" role="presentation"></span>
       </div>
-      <p>Excesso de bactérias que passa por gastrite. Intestino irritável com exames normais. Um quadro se confunde com outro, e o primeiro nome nem sempre é o certo. A Dra. Maria Luiza investiga as causas possíveis pela sua história (o que sente, desde quando, o que piora, que remédios usa) e indica exames quando necessário.</p>
-      <p>Pode contar do gás e do banheiro sem rodeio: na consulta, isso é assunto normal. Fora da consulta dela: atendimento de criança e endoscopia alta. Nesses casos, a equipe diz para onde ir.</p>
-      <ol class="passos">
-        <li class="passo">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
-          <div><h3>Leve os exames</h3><p>TGO, TGP, ultrassom, colonoscopia antiga: impressos ou no celular. Exame antigo mostra se o valor subiu, caiu ou parou.</p></div>
-        </li>
-        <li class="passo">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-          <div><h3>O exame, explicado</h3><p>TGO alta, grau de gordura no ultrassom, laudo cheio de termo técnico: ela explica o que cada valor quer dizer no seu caso. Exame normal também conta, porque ajuda a afastar causas.</p></div>
-        </li>
-        <li class="passo">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-          <div><h3>Uma decisão no fim</h3><p>Tratamento, exame que falta ou retorno com data. Você sai sabendo qual, e por quê.</p></div>
-        </li>
-      </ol>
+      <p>Na consulta, quero saber dos remédios que você toma, dos exames que trouxe e do que mudou desde o começo. Muita alteração de fígado e de intestino começa fora deles. E o remédio que você já tomou e não fez efeito também é pista: entra na conversa.</p>
+      <p>Gases, cheiro, banheiro toda hora, barriga estufada na calça: pode falar do jeito que você fala em casa. Eu pergunto sem rodeio, porque o detalhe muda o caminho: quantas vezes por dia, como são as fezes, o que piora. Comigo, isso é conversa normal.</p>
     </div>
+  </div>
+</section>
+
+<section class="depois" data-bloco="depois">
+  <div class="wrap" data-rv>
+    <div class="cab">
+      <h2>O que acontece depois que você me chama no WhatsApp</h2>
+      <span class="filete" role="presentation"></span>
+    </div>
+    <ol class="etapas">
+      <li class="etapa"><h3>Você conta o que sente, a qualquer hora</h3><p>A Ana Clara, da minha equipe, responde 24 horas por dia: pergunta o que te trouxe e passa o valor e os horários livres. Você escolhe o que te atende.</p></li>
+      <li class="etapa"><h3>Confirma com nome e telefone</h3><p>Ela pede o nome completo e o telefone de quem vai à consulta. Com o horário confirmado no sistema, você recebe o endereço.</p></li>
+      <li class="etapa"><h3>A consulta, na segunda</h3><p>Segunda de manhã, cerca de 30 minutos, no horário marcado. Leve seus exames, os antigos também, impressos ou no celular.</p></li>
+      <li class="etapa"><h3>Você sai com o próximo passo</h3><p>Tratamento, exame que falta ou retorno. Eu explico qual, e por quê, antes de você sair.</p></li>
+    </ol>
+    <button class="btn" type="button" data-wa>Falar no WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
   </div>
 </section>
 
@@ -545,7 +559,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
         </li>
         <li class="cred">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-          <div><h3>Graduação e publicações</h3><p>Medicina, FIP-Moc, 2017 · Prêmio Doutor Hermes de Paula · Artigos no <a href="http://lattes.cnpq.br/8259106256788768" target="_blank" rel="noopener">Currículo Lattes</a></p></div>
+          <div><h3>Graduação e publicações</h3><p>Medicina, FIP-Moc, 2017 · Prêmio Doutor Hermes de Paula · Textos de 2022, com R. E. F. Rezende: “Síndrome do intestino irritável com constipação e constipação crônica idiopática: estratégias de tratamento” e “Qual a dieta ideal para doença hepática gordurosa não-alcoólica?” · Artigos no <a href="http://lattes.cnpq.br/8259106256788768" target="_blank" rel="noopener">Currículo Lattes</a></p></div>
         </li>
       </ul>
     </div>
@@ -573,11 +587,10 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
       <span class="filete" role="presentation"></span>
     </div>
     <div class="lista">
-      <details open><summary>Devo levar meus exames para a consulta?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Sim, todos, inclusive os antigos. Impressos ou no celular. Comparar resultados mostra se o valor subiu, caiu ou ficou parado.</p></details>
-      <details><summary>Quanto dura a consulta?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Cerca de 30 minutos, em horário pontual.</p></details>
-      <details><summary>Ela faz colonoscopia ou teste de SIBO?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Ela indica quando o exame faz sentido e lê o resultado na consulta. Se o exame é feito na própria Gastrus, a equipe confirma pelo WhatsApp.</p></details>
-      <details><summary>Posso mandar meu exame pelo WhatsApp para ela avaliar?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não. Por mensagem, o exame chega sem o resto: sintomas, remédios, exames anteriores. Leve o resultado à consulta.</p></details>
-      <details><summary>Como agendo a consulta?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Pelo WhatsApp da Clínica Gastrus. A agenda da Dra. Maria Luiza é às segundas, das 8h às 11h, e a equipe confirma o horário.</p></details>
+      <details open><summary>Você atende o meu plano?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Atendo os convênios da Clínica Gastrus: Amil, Camed, Casu, SulAmérica, Copasa, Cemig, Libertas, GEAP e Codevasf. Outro plano, a consulta é particular. A equipe confirma o seu pelo WhatsApp.</p></details>
+      <details><summary>Você faz colonoscopia ou teste de SIBO?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Faço, na própria Clínica Gastrus. Indico quando o exame cabe no seu caso e leio o resultado com você na consulta.</p></details>
+      <details><summary>Posso mandar meu exame pelo WhatsApp para você avaliar?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Por mensagem, não. O exame chega sem o resto: o que você sente, desde quando, que remédios toma. O mesmo valor quer dizer coisas diferentes em pessoas diferentes. Traga para a consulta.</p></details>
+      <details><summary>Quais exames eu levo?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Todos os que tiver: exame de sangue (TGO, TGP), ultrassom, colonoscopia, endoscopia. Leve também a lista dos remédios que usa. Comparar exame antigo com o novo mostra se o valor subiu, caiu ou parou.</p></details>
       <details><summary>E se eu tiver um sinal de alerta agora?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não espere a consulta. Vômito com sangue, fezes pretas ou com sangue vivo, dor forte na barriga que não passa, pele e olhos amarelados de repente com febre ou desmaio: vá ao pronto-atendimento mais perto ou ligue 192.</p></details>
     </div>
   </div>
@@ -588,7 +601,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
   <div class="wrap" data-rv>
     <div class="cab">
       <h2>Onde e quando é a consulta</h2>
-      <p>A Dra. Maria Luiza atende na Clínica Gastrus, em Montes Claros.</p>
+      <p>Atendo na Clínica Gastrus, em Montes Claros.</p>
     </div>
     <dl>
       <div class="linha-l">
@@ -612,7 +625,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
   <div class="wrap cta-grid" data-rv>
     <div class="cta-texto">
       <h2>Exame alterado parado na gaveta não responde nada.</h2>
-      <p>Leve o resultado e a sua história à consulta. Agenda às segundas de manhã, na Clínica Gastrus.</p>
+      <p>Me conta pelo WhatsApp o que está sentindo. Atendo às segundas de manhã, na Clínica Gastrus.</p>
       <button class="btn btn-claro" type="button" data-wa>Falar no WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
     </div>
     <figure class="foto"><img src="fotos/ml-ia-mesa.jpg" width="928" height="1152" alt="" loading="lazy" decoding="async"></figure>
