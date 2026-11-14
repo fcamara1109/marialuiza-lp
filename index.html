@@ -319,20 +319,24 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 
 /* ---------- celular: foto de fundo com o texto sobre o degrade (molde Priscila, Felipe 14/11); o WhatsApp e a barra fixa ---------- */
 @media (max-width:879px){
-  .hero{position:relative;padding:0 0 24px;background:#3a2417}
+  /* hero do celular (Felipe, 14/11/2026): foto ocupa a tela entre o header e a barra fixa; rosto na metade de cima, sem texto em cima dele; texto embaixo, sobre o degradê escuro */
+  .hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:calc(100svh - 68px - 100px);padding:0 0 22px;background:#3a2417}
   .hero-grid{display:block}
-  .moldura{position:absolute;inset:0 0 auto 0;height:64svh;width:100%;margin:0;padding:0}
+  .moldura{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0}
   .contorno{display:none}
   .arco{aspect-ratio:auto;height:100%;border-radius:0;box-shadow:none}
-  .arco img{object-position:55% 30%;transform:scale(1.3);transform-origin:55% 82%}
-  .moldura::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,36,23,0) 45%,rgba(58,36,23,.85) 80%,#3a2417 100%)}
-  .hero-copia{display:flex;position:relative;z-index:1;padding-top:clamp(110px,calc(100svh - 520px),420px);gap:14px}
+  .arco img{object-position:55% 100%;transform:scale(1.35);transform-origin:55% 100%}
+  .moldura::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,36,23,0) 42%,rgba(58,36,23,.72) 56%,rgba(58,36,23,.94) 70%,#3a2417 100%)}
+  .hero-copia{position:relative;z-index:1;gap:12px}
   .hero-copia>*{margin-top:0!important}
-  .hero h1{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.25)}
-  .hero .legal{color:rgba(255,255,255,.82)}
-  .hero .chips li{background:rgba(255,255,255,.16);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-  .hero .micro{color:rgba(255,255,255,.82)}
+  .hero-acao{display:none}
+  .hero h1{color:#fff;font-size:clamp(1.75rem,4.3svh,2.25rem);line-height:1.12;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+  .hero .legal{color:rgba(255,255,255,.88)}
+  .chips{gap:8px}
+  .hero .chips li{padding:6px 14px 6px 10px;font-size:.875rem;background:rgba(255,255,255,.16);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 }
+/* 320px: header e barra fixa ficam mais altos (texto quebra), o hero desconta mais */
+@media (max-width:359px){.hero{min-height:calc(100svh - 76px - 128px)}}
 
 /* ---------- tela larga ---------- */
 @media (min-width:880px){
@@ -406,9 +410,9 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 @media (prefers-reduced-motion:reduce){[data-sticky],[data-sticky].sticky-off{transition:none}}
 /* celular: o CTA do hero some e a barra fixa fica visivel desde o topo, igual em toda LP de medico (Felipe, 14/11/2026; Fred, Aline). Alvo escondido nunca intersecta, entao a barra nao sai. */
 @media (max-width:879px){[data-sticky-alvo]{display:none!important}:has(> .hero-micro){display:none!important}}
-/* a frase padrao "Agende pelo WhatsApp em qualquer horario." mora na barra fixa no celular (Felipe, 14/11/2026); o gerador injeta o <p class="sticky-micro"> */
+/* a frase padrao "Agende pelo WhatsApp em qualquer horario." mora na barra fixa no celular (Felipe, 14/11/2026); o gerador injeta o paragrafo .sticky-micro (sem tag literal aqui: o gabarito contaria o comentario como texto) */
 [data-sticky]{flex-wrap:wrap}
-.sticky-micro{flex-basis:100%;margin:6px 0 0;text-align:center;font-size:.875rem;line-height:1.3;color:inherit;opacity:.85}
+.sticky-micro{flex-basis:100%;margin:8px 0 0;text-align:center;font-size:.9375rem;font-weight:500;line-height:1.3;color:inherit}
 @media (min-width:880px){.sticky-micro{display:none}}
 </style>
 </head>
