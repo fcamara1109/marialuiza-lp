@@ -99,55 +99,27 @@ Data: 2026-11-09. Marca: external/doctors/marialuiza/wiki/concepts/marca-marialu
 
 #wa-modal,.wafloat{
   --wa:#25D366;
-  --wa-head-a:var(--ml-surface);--wa-head-b:var(--ml-ink);
+  --wa-head-a:var(--ml-accent);--wa-head-b:var(--ml-accent-deep,var(--ml-accent));
   --wa-accent:var(--ml-accent);--wa-accent-d:var(--ml-accent-deep,var(--ml-accent));
-  --wa-band:var(--ml-clay,var(--ml-paper-2,var(--ml-paper)));--wa-surface:var(--ml-surface);--wa-line:var(--ml-hair-forte);
+  --wa-band:var(--ml-paper-2,var(--ml-paper));--wa-surface:var(--ml-surface);--wa-line:var(--ml-hair-forte);
   --wa-ink:var(--ml-ink);--wa-muted:var(--ml-ink-3);
   --wa-head-font:var(--ml-display);--wa-body-font:var(--ml-body);
 }
-/* header claro e centrado, foto com o contorno fino deslocado, sem bloco de cor. O X mora no canto e o texto do header e centrado e estreito: nunca se cruzam. */
-#wa-modal .widget{width:400px;max-height:calc(100dvh - 24px);overflow-y:auto;border-radius:20px;box-shadow:var(--ml-sombra-foto,0 24px 60px -20px rgba(0,0,0,.35))}
-#wa-modal .wa-close{width:44px;height:44px;top:10px;right:10px;background:var(--ml-paper-2,var(--ml-paper));color:var(--ml-ink);border:1px solid var(--ml-hair);transition:background var(--ml-dur,.2s) var(--ml-ease,ease)}
-#wa-modal .wa-close:hover{background:var(--ml-clay,var(--ml-paper-2,var(--ml-paper)))}
+#wa-modal .widget{width:400px;max-height:calc(100dvh - 24px);overflow-y:auto;border-radius:20px}
+#wa-modal .wa-close{width:44px;height:44px;top:8px;right:8px}
 #wa-modal .wa-close svg{width:18px;height:18px}
-#wa-modal .whead{flex-direction:column;justify-content:center;gap:.9rem;padding:1.9rem 1.5rem 1.35rem;background:var(--ml-surface);color:var(--ml-ink);text-align:center}
-#wa-modal .avatar{width:88px;height:88px;border:0;background:none;display:block;margin:0 6px 0 0}
-#wa-modal .avatar::before{content:"";position:absolute;inset:0;border:1.5px solid var(--ml-accent);border-radius:50%;transform:translate(6px,5px)}
-#wa-modal .avatar img{position:relative;box-shadow:0 0 0 3px var(--ml-surface)}
-#wa-modal .who{align-items:center;gap:.3rem}
-#wa-modal .nm{font-weight:400;font-size:1.25rem;color:var(--ml-ink)}
-#wa-modal .cred{font-size:.9375rem;font-weight:400;color:var(--ml-ink-2);line-height:1.4}
-#wa-modal .online{justify-content:center;gap:.55rem;padding:.7rem 1.5rem;border-top:1px solid var(--ml-hair);font-size:.9375rem;font-weight:500;color:var(--ml-ink)}
-#wa-modal .online .ico{flex:none;width:20px;height:20px;color:var(--ml-accent-deep,var(--ml-accent))}
-#wa-modal .wbody{padding:1.6rem 1.5rem 1.75rem}
-#wa-modal .lead-line{font-weight:400;font-size:1.45rem;letter-spacing:.02em;line-height:1.3;text-align:center;text-wrap:balance;margin-bottom:1.25rem}
-#wa-modal .field{margin-bottom:.55rem}
-#wa-modal .field .lbl{font-size:1rem;font-weight:500;color:var(--ml-ink);margin-bottom:.4rem}
-#wa-modal .field input{font-size:1.125rem;height:52px;border-color:var(--ml-hair-forte)}
-#wa-modal .field input::placeholder{color:var(--ml-ink-3)}
-#wa-modal .field input:focus{border-color:var(--ml-ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--ml-accent) 30%,transparent)}
-#wa-modal .wa-hint{margin:0 0 1.3rem;font-size:.9375rem;line-height:1.45;color:var(--ml-ink-2)}
+#wa-modal .nm{font-size:1.25rem}
+#wa-modal .cred{font-size:.875rem;line-height:1.4}
+#wa-modal .online{font-size:.9375rem;font-weight:500;color:var(--ml-ink)}
+#wa-modal .lead-line{color:var(--ml-ink)}
+#wa-modal .field .lbl{font-size:.9375rem;color:var(--ml-ink)}
+#wa-modal .field input{font-size:1.125rem;height:52px}
+#wa-modal .wa-hint{margin:.5rem 0 1.1rem;font-size:.9375rem;line-height:1.45;color:var(--ml-ink-2)}
 #wa-modal .wa-err-msg{font-size:1rem;font-weight:500;color:var(--ml-erro,#A03A34)}
 #wa-modal .field input.wa-err,#wa-modal .field input.wa-err:focus{border-color:var(--ml-erro,#A03A34);box-shadow:0 0 0 3px color-mix(in srgb,var(--ml-erro,#A03A34) 20%,transparent)}
-#wa-modal .btn{font-family:var(--ml-body);font-weight:500;font-size:1.0625rem;letter-spacing:.01em;color:var(--ml-on-accent);background:var(--ml-cta-gradient,linear-gradient(180deg,var(--ml-accent) 0%,var(--ml-accent-deep,var(--ml-accent)) 100%));box-shadow:var(--ml-sombra-btn,0 0 0 0 transparent);border-radius:var(--ml-r-btn,12px)}
-#wa-modal .btn:hover{filter:none;background:var(--ml-cta-gradient-hover,var(--ml-cta-gradient,linear-gradient(180deg,var(--ml-accent) 0%,var(--ml-accent-deep,var(--ml-accent)) 100%)));box-shadow:var(--ml-sombra-btn-hover,var(--ml-sombra-btn,0 0 0 0 transparent))}
 #wa-modal .btn .wa-ic{fill:currentColor}
-#wa-modal :focus-visible{outline:2px solid var(--ml-ink);outline-offset:3px}
-/* tela 2: o X ocupa a faixa de cima (44px + 10px), o aviso comeca abaixo dela */
-#wa-modal .warn-body{padding:3.5rem 1.5rem 1.6rem}
-#wa-modal .notice{background:var(--ml-paper);border:1px solid var(--ml-hair-forte);border-radius:16px;padding:1.25rem 1.3rem 1.35rem}
-#wa-modal .notice-head{padding:0;border-radius:0;background:none;color:var(--ml-ink);gap:.6rem;margin-bottom:.8rem;font-family:var(--ml-display);font-weight:400;font-size:1.125rem;letter-spacing:.02em;line-height:1.3}
-#wa-modal .notice-head .ic{flex:none;width:1.5rem;height:1.5rem;color:var(--ml-accent-deep,var(--ml-accent))}
 #wa-modal .notice p{font-size:1.0625rem}
-#wa-modal .notice .num,#wa-modal .num-reinforce b{font-family:var(--ml-body);font-weight:500}
-#wa-modal .num-reinforce{font-size:1rem;color:var(--ml-ink-2)}
-#wa-modal .back{font-size:1rem;min-height:44px;color:var(--ml-ink-2);text-decoration:underline;text-underline-offset:3px}
-@media (max-height:700px){
-  #wa-modal .whead{padding-top:1.5rem;gap:.7rem}
-  #wa-modal .avatar{width:72px;height:72px}
-  #wa-modal .wbody{padding-top:1.25rem}
-  #wa-modal .lead-line{margin-bottom:1rem}
-}
+#wa-modal .back{font-size:1rem;min-height:44px}
 /* flutuante na cor da marca, com anel do fundo: sem ele o botao some sobre faixas de cor */
 .wafloat{right:28px;bottom:28px;width:60px;height:60px;background:var(--ml-cta-gradient,linear-gradient(180deg,var(--ml-accent) 0%,var(--ml-accent-deep,var(--ml-accent)) 100%));box-shadow:0 0 0 3px var(--ml-paper),var(--ml-sombra-btn,0 0 0 0 transparent);transition:transform var(--ml-dur,.2s) var(--ml-ease,ease),box-shadow var(--ml-dur,.2s) var(--ml-ease,ease)}
 .wafloat svg{fill:var(--ml-on-accent)}
@@ -211,7 +183,9 @@ h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5
 .hero-copia{display:flex;flex-direction:column;gap:20px}
 .hero-acao{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:4px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
-.chips li{padding:8px 16px;border-radius:999px;background:var(--ml-paper-2);color:var(--ml-accent-deep);font-size:.9375rem;font-weight:var(--ml-peso-rotulo);line-height:1.3}
+.chips li{display:inline-flex;align-items:center;gap:8px;padding:8px 16px 8px 12px;border-radius:999px;background:var(--ml-paper-2);color:var(--ml-accent-deep);font-size:.9375rem;font-weight:var(--ml-peso-rotulo);line-height:1.3}
+.ico-chip{flex:none;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hero .legal{font-size:.8125rem;font-weight:var(--ml-peso-rotulo);letter-spacing:.14em;text-transform:uppercase;color:var(--ml-ink-2)}
 .micro{font-size:1rem;line-height:1.5;color:var(--ml-ink-2)}
 /* grafismo proprio (exploracoes/grafismos.html, opcao 1, Laco): janela de canto de cima reto e volta larga embaixo, linha fina terracota aberta no alto, deslocada para cima e para a esquerda */
 .moldura{position:relative;width:min(78vw,330px);margin:8px auto 0;padding:16px 0 0 16px}
@@ -326,6 +300,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 /* ---------- WhatsApp: flutuante (desktop) e barra fixa (celular) ---------- */
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;justify-content:center;background:var(--ml-paper);border-top:1px solid var(--ml-hair);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -12px 24px -18px rgba(38,48,42,.4)}
 .sticky .btn{width:min(100%,360px)}
+.ico-wa{flex:none;width:22px;height:22px;fill:currentColor}
 .wafloat{display:none}
 
 /* ---------- movimento: um momento autoral (o arco sobe, o texto chega depois). Sem JS nada esconde ---------- */
@@ -339,14 +314,21 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 .js .hero-copia>:nth-child(3){animation-delay:.2s}
 .js .hero-copia>:nth-child(4){animation-delay:.3s}
 
-/* ---------- celular: retrato pequeno com o registro ao lado, antes do titulo (o rosto fica na primeira dobra) ---------- */
+/* ---------- celular: foto de fundo com o texto sobre o degrade (molde Priscila, Felipe 14/11); o WhatsApp e a barra fixa ---------- */
 @media (max-width:879px){
-  .hero{padding-top:20px}
-  .hero-grid{grid-template-columns:112px minmax(0,1fr);column-gap:16px;row-gap:0;align-items:center}
-  .hero-copia{display:contents}
-  .moldura{grid-column:1;grid-row:1;width:112px;margin:0;padding:8px 0 0 8px}
-  .hero-copia>*{grid-column:1/-1;margin-top:18px}
-  .hero-copia>.legal{grid-column:2;grid-row:1;margin-top:0}
+  .hero{position:relative;padding:0 0 24px;background:#3a2417}
+  .hero-grid{display:block}
+  .moldura{position:absolute;inset:0 0 auto 0;height:64svh;width:100%;margin:0;padding:0}
+  .contorno{display:none}
+  .arco{aspect-ratio:auto;height:100%;border-radius:0;box-shadow:none}
+  .arco img{object-position:55% 30%;transform:scale(1.3);transform-origin:55% 82%}
+  .moldura::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,36,23,0) 45%,rgba(58,36,23,.85) 80%,#3a2417 100%)}
+  .hero-copia{display:flex;position:relative;z-index:1;padding-top:clamp(140px,calc(100svh - 480px),440px);gap:14px}
+  .hero-copia>*{margin-top:0!important}
+  .hero h1{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.25)}
+  .hero .legal{color:rgba(255,255,255,.82)}
+  .hero .chips li{background:rgba(255,255,255,.16);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .hero .micro{color:rgba(255,255,255,.82)}
 }
 
 /* ---------- tela larga ---------- */
@@ -419,6 +401,8 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 [data-sticky]{transition:transform .3s ease,visibility 0s}
 [data-sticky].sticky-off{transform:translateY(110%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
 @media (prefers-reduced-motion:reduce){[data-sticky],[data-sticky].sticky-off{transition:none}}
+/* celular: o CTA do hero some e a barra fixa fica visivel desde o topo, igual em toda LP de medico (Felipe, 14/11/2026; Fred, Aline). Alvo escondido nunca intersecta, entao a barra nao sai. */
+@media (max-width:879px){[data-sticky-alvo]{display:none!important}}
 </style>
 </head>
 <body>
@@ -439,13 +423,13 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 <section class="hero" data-bloco="hero">
   <div class="wrap hero-grid">
     <div class="hero-copia">
-      <ul class="chips"><li>Residência no HC da USP/SP</li><li>Gastro e Clínica Médica</li></ul>
+      <p class="legal">CRM-MG 73963 · RQE 58851</p>
+      <ul class="chips"><li><svg class="ico-chip" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></svg>Residência no HC da USP/SP</li><li><svg class="ico-chip" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v6a5 5 0 0 0 10 0V3"/><path d="M10 14v2a5 5 0 0 0 10 0v-3"/><circle cx="20" cy="11" r="2"/></svg>Gastro e Clínica Médica</li></ul>
       <h1>Gases, banheiro toda hora, fígado alterado: pode vir, eu trato com ciência e leveza.</h1>
       <div class="hero-acao">
-        <button class="btn" type="button" data-wa data-sticky-alvo>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
-        <p class="micro">Sem precisar contar o sintoma. A Clínica Gastrus confirma o horário.</p>
+        <button class="btn" type="button" data-wa data-sticky-alvo>Falar no WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        <p class="micro">Agende pelo WhatsApp em qualquer horário.</p>
       </div>
-      <p class="legal">Dra. Maria Luiza Terra · CRM-MG&nbsp;73963 · RQE&nbsp;58851</p>
     </div>
     <figure class="moldura">
       <svg class="contorno" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M62 0H4A4 3.2 0 0 0 0 3.2V96.8A4 3.2 0 0 0 4 100H54A46 36 0 0 0 100 64V30C100 25 96 21 90 22"/></svg>
@@ -489,7 +473,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
     </ul>
     <div class="fecho">
       <p>Uma dessas é a sua? Agende pelo WhatsApp.</p>
-      <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      <button class="btn" type="button" data-wa>Falar no WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
     </div>
   </div>
 </section>
@@ -609,7 +593,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
         <div><dt>Consulta</dt><dd>Cerca de 30 minutos, horário pontual. Chegue alguns minutos antes.</dd></div>
       </div>
     </dl>
-    <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+    <button class="btn" type="button" data-wa>Falar no WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
   </div>
 </section>
 
@@ -618,7 +602,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
     <div class="cta-texto">
       <h2>Exame alterado parado na gaveta não responde nada.</h2>
       <p>Leve o resultado e a sua história à consulta. Agenda às segundas de manhã, na Clínica Gastrus.</p>
-      <button class="btn btn-claro" type="button" data-wa>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      <button class="btn btn-claro" type="button" data-wa>Falar no WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
     </div>
     <figure class="foto"><img src="fotos/ml-ia-mesa.jpg" width="928" height="1152" alt="" loading="lazy" decoding="async"></figure>
   </div>
@@ -647,8 +631,8 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 
 <!-- barra fixa (celular). Sem JavaScript o widget nao abre: o noscript mostra um link simples (numero e texto saem do site.json e do copy.md). -->
 <div class="sticky" data-sticky>
-  <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
-  <noscript><a class="btn" href="https://wa.me/5538999865405?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20agendar%20consulta%20com%20a%20Dra.%20Maria%20Luiza.">Agendar pelo WhatsApp</a></noscript>
+  <button class="btn" type="button" data-wa><svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></svg> Falar no WhatsApp</button>
+  <noscript><a class="btn" href="https://wa.me/5538999865405?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20agendar%20consulta%20com%20a%20Dra.%20Maria%20Luiza.">Falar no WhatsApp</a></noscript>
 </div>
 
 <script>
@@ -681,26 +665,26 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
     <!-- tela 1: captura -->
     <div class="screen active" id="wa-s1">
       <div class="whead">
-        <span class="avatar foto">
-          <img src="fotos/ml-avatar.jpg" alt="Retrato da Dra. Maria Luiza Terra" width="96" height="96" decoding="async">
+        <span class="avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v3a2 2 0 0 0 2 2h1v-5H6a2 2 0 0 0-2 2z"/><path d="M20 13v3a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"/><path d="M17 18a3 3 0 0 1-3 2.5h-2"/></svg>
+          <span class="on"></span>
         </span>
         <div class="who">
-          <span class="nm">Dra. Maria Luiza Terra</span>
-          <span class="cred">Médica Gastroenterologista · CRM-MG 73963</span>
-          <span class="cred">RQE 58851 · Clínica Gastrus</span>
+          <span class="nm">Ana Clara</span>
+          <span class="cred">Atendente da Dra. Maria Luiza · Gastroenterologista</span>
+          <span class="cred">Clínica Gastrus · Montes Claros</span>
         </div>
       </div>
-      <div class="online"><span class="dot"></span>Atendimento pelo WhatsApp da Clínica Gastrus</div>
+      <div class="online"><span class="dot"></span>Online agora · resposta em minutos</div>
       <div class="wbody">
-        <div class="lead-line">Agendar consulta</div>
+        <div class="lead-line">Fale com a gente</div>
         <label class="field">
           <span class="lbl">Seu WhatsApp</span>
-          <input id="wa-phone" type="tel" inputmode="tel" placeholder="(00) 0 0000-0000" autocomplete="tel" data-1p-ignore data-lpignore="true" aria-describedby="wa-dica" data-wa-err="Digite seu WhatsApp com DDD, por exemplo 38 99999-0000.">
+          <input id="wa-phone" type="tel" inputmode="tel" placeholder="(00) 0 0000-0000" autocomplete="tel" data-1p-ignore data-lpignore="true" data-wa-err="Digite seu WhatsApp com DDD, por exemplo 38 99999-0000.">
         </label>
-        <p class="wa-hint" id="wa-dica">Só usamos o número para responder.</p>
         <button class="btn" id="wa-go" type="button">
           <svg class="wa-ic" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>
-          Continuar no WhatsApp
+          Falar no WhatsApp
         </button>
       </div>
     </div>
@@ -714,7 +698,7 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
           </div>
           <p>Ao abrir o WhatsApp, pode aparecer um aviso de <b>"número desconhecido"</b>.</p>
           <p><b>Isso é normal.</b> O número <b class="num" data-wa-num></b>, da <b>Dra. Maria Luiza Terra</b>, é oficial.</p>
-          <p>É só clicar em <b>Continuar</b> para falar com a equipe da Dra. Maria Luiza.</p>
+          <p>É só clicar em <b>Continuar</b> para falar com a Ana Clara.</p>
         </div>
         <button class="btn" id="wa-last-step" type="button">
           <svg class="wa-ic" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35z"/></svg>
