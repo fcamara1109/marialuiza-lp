@@ -181,7 +181,6 @@ p{text-wrap:pretty}
 h1{font-family:var(--ml-display);font-weight:var(--ml-peso-display);font-size:clamp(32px,4.4vw,52px);line-height:1.18;letter-spacing:var(--ml-track-titulo)}
 h2{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:clamp(32px,2.6vw + 14px,44px);line-height:1.15;letter-spacing:var(--ml-track-titulo)}
 h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5rem;line-height:1.3}
-.lede{font-size:1.375rem;line-height:1.55;color:var(--ml-ink-2)}
 .leg{font-size:1rem;line-height:1.6}
 .legal{font-size:.9375rem;line-height:1.5;color:var(--ml-ink-3)}
 /* filete com gancho: a barra do T do monograma */
@@ -211,6 +210,8 @@ h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5
 .hero-grid{display:grid;gap:36px}
 .hero-copia{display:flex;flex-direction:column;gap:20px}
 .hero-acao{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.chips li{padding:8px 16px;border-radius:999px;background:var(--ml-paper-2);color:var(--ml-accent-deep);font-size:.9375rem;font-weight:var(--ml-peso-rotulo);line-height:1.3}
 .micro{font-size:1rem;line-height:1.5;color:var(--ml-ink-2)}
 /* grafismo proprio (exploracoes/grafismos.html, opcao 1, Laco): janela de canto de cima reto e volta larga embaixo, linha fina terracota aberta no alto, deslocada para cima e para a esquerda */
 .moldura{position:relative;width:min(78vw,330px);margin:8px auto 0;padding:16px 0 0 16px}
@@ -436,13 +437,13 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
 <section class="hero" data-bloco="hero">
   <div class="wrap hero-grid">
     <div class="hero-copia">
-      <h1>Gases, barriga estufada, banheiro toda hora: eu trato com ciência e leveza.</h1>
-      <p class="lede">Sou a Dra. Maria Luiza Terra, gastroenterologista em Montes Claros. Intolerância, intestino irritável e excesso de bactérias dão sintomas parecidos. Eu investigo qual é o seu.</p>
+      <ul class="chips"><li>Residência no HC da USP/SP</li><li>Gastro e Clínica Médica</li></ul>
+      <h1>Gases, banheiro toda hora, fígado alterado: pode vir, eu trato com ciência e leveza.</h1>
       <div class="hero-acao">
         <button class="btn" type="button" data-wa data-sticky-alvo>Agendar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
-        <p class="micro">A mensagem já vai escrita, sem precisar contar o sintoma. A equipe da Clínica Gastrus confirma o horário.</p>
+        <p class="micro">Sem precisar contar o sintoma. A Clínica Gastrus confirma o horário.</p>
       </div>
-      <p class="legal">Dra. Maria Luiza Terra, Médica Gastroenterologista, CRM-MG 73963, RQE 58851.</p>
+      <p class="legal">Dra. Maria Luiza Terra · CRM-MG&nbsp;73963 · RQE&nbsp;58851</p>
     </div>
     <figure class="moldura">
       <svg class="contorno" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M62 0H4A4 3.2 0 0 0 0 3.2V96.8A4 3.2 0 0 0 4 100H54A46 36 0 0 0 100 64V30C100 25 96 21 90 22"/></svg>
