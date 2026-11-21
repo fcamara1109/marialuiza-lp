@@ -156,7 +156,7 @@ p{text-wrap:pretty}
 .ico{flex:none;width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 
 /* ---------- tipografia: a escala sai dos tokens da marca ---------- */
-h1{font-family:var(--ml-display);font-weight:var(--ml-peso-display);font-size:clamp(32px,4.4vw,52px);line-height:1.18;letter-spacing:var(--ml-track-titulo)}
+.hero-titulo{font-family:var(--ml-display);font-weight:var(--ml-peso-display);font-size:clamp(32px,4.4vw,52px);line-height:1.18;letter-spacing:var(--ml-track-titulo)}
 h2{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:clamp(27px,2.4vw + 18px,44px);line-height:1.15;letter-spacing:var(--ml-track-titulo)}
 h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5rem;line-height:1.3}
 .leg{font-size:1rem;line-height:1.6}
@@ -181,7 +181,8 @@ h3{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:1.5
 .marca img{width:46px;height:46px;flex:none}
 .wm{display:flex;flex-direction:column;gap:2px}
 .wm b{font-family:var(--ml-display);font-weight:var(--ml-peso-titulo);font-size:.9375rem;letter-spacing:.12em;text-transform:uppercase;line-height:1.2}
-.wm span{font-size:.9375rem;line-height:1.3;color:var(--ml-ink-2)}
+.wm span,.wm h1{font-size:.9375rem;line-height:1.3;color:var(--ml-ink-2)}
+.wm h1{font-family:inherit;font-weight:inherit;letter-spacing:inherit;text-wrap:inherit}  /* o h1 do header (Profissão · Cidade) tem a cara da linha que era span */
 
 /* ---------- hero ---------- */
 .hero{padding:30px 0 60px;background:var(--ml-paper);overflow:hidden}
@@ -339,7 +340,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
   .hero-copia{position:relative;z-index:1;gap:12px}
   .hero-copia>*{margin-top:0!important}
   .hero-acao{display:none}
-  .hero h1{color:#fff;font-size:clamp(1.75rem,4.3svh,2.25rem);line-height:1.12;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+  .hero .hero-titulo{color:#fff;font-size:clamp(1.75rem,4.3svh,2.25rem);line-height:1.12;text-shadow:0 1px 14px rgba(0,0,0,.35)}
   .hero .legal{color:rgba(255,255,255,.88)}
   .chips{gap:8px}
   .hero .chips li{padding:6px 14px 6px 10px;font-size:.875rem;background:rgba(255,255,255,.16);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
@@ -440,7 +441,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
   <div class="wrap">
     <a class="marca" href="#conteudo" aria-label="Dra. Maria Luiza Terra, Gastroenterologista em Montes Claros">
       <img src="assets/simbolo-claro.svg" width="46" height="46" alt="">
-      <span class="wm"><b>Dra. Maria Luiza Terra</b><span>Gastroenterologista em Montes Claros</span></span>
+      <span class="wm"><b>Dra. Maria Luiza Terra</b><h1>Gastroenterologista · Montes Claros</h1></span>
     </a>
     <button class="btn btn-linha" type="button" data-wa>Agendar</button>
   </div>
@@ -453,7 +454,7 @@ details p{padding:0 4px 24px;max-width:46rem;color:var(--ml-ink-2)}
     <div class="hero-copia">
       <p class="legal">CRM-MG 73963 · RQE 58851</p>
       <ul class="chips"><li><svg class="ico-chip" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></svg>Residência no HC da USP/SP</li><li><svg class="ico-chip" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v6a5 5 0 0 0 10 0V3"/><path d="M10 14v2a5 5 0 0 0 10 0v-3"/><circle cx="20" cy="11" r="2"/></svg>Gastro e Clínica Médica</li></ul>
-      <h1>Gases, banheiro toda hora, fígado alterado: pode vir, eu trato com leveza e ciência.</h1>
+      <h2 class="hero-titulo">Gases, banheiro toda hora, fígado alterado: pode vir, eu trato com leveza e ciência.</h2>
       <div class="hero-acao">
         <button class="btn" type="button" data-wa data-sticky-alvo>Falar no WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
         <p class="micro"><span class="hero-micro">Agende pelo WhatsApp em qualquer horário.</span></p>
